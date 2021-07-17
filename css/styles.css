@@ -907,30 +907,62 @@ img {
 
 .modal-form-checkbox:checked + .modal-form-checkbox-label::before {
   background-image: url(../images/svg/check.svg);
-}
-
-.modal-form-checkbox:focus + .modal-form-checkbox-label::before {
-  /* outline: 2px solid rgba(0, 0, 255, 0.5); */
-
-  border-radius: 2px;
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  background-size: cover;
+  background-position: center;
+  background-origin: border-box;
 }
 
 .modal-form-checkbox-label {
   display: flex;
   align-items: center;
-  justify-content: center;
-
   font-size: 14px;
   line-height: 24px;
   margin-bottom: 30px;
 }
 
 .modal-form-checkbox-label::before {
-  display: block;
+  display: inline-block;
   content: '';
   width: 16px;
   height: 15px;
-  border: 1px solid #212121;
+  border: 2px solid var(--title-text-color);
+  border-radius: 1px;
   cursor: pointer;
-  margin-right: 10px;
+  margin-right: 7px;
+  margin-left: 12px;
+}
+
+.checkbox {
+  display: inline-flex;
+  align-items: center;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.modal-form-btn {
+  width: 200px;
+  height: 50px;
+  padding: 10px 55px;
+  align-self: center;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  background: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  color: var(--font-color);
+  cursor: pointer;
+  transition: background var(--timing-function) var(--effect-duration);
+}
+.modal-form-btn:hover,
+.modal-form-btn:focus {
+  background: var(--accent-color);
 }
